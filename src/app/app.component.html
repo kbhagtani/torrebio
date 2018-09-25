@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="mt-5">
+    Login To Application
+  </h1>
+  <div class="row mt-5">
+    <div class="col">
+      <button id="loginBtn" class="btn btn-primary" [hidden]="isUserAuthenticated | async" (click)="login()">Login with LinkedIN</button>
+      <button id="loginBtn" class="btn btn-primary" [hidden]="isUserAuthenticated | async" (click)="loginTorre()">Login with Torre Bio</button>
+      <button id="logoutBtn" class="btn btn-primary" [hidden]="!(isUserAuthenticated | async)" (click)="logout()">Logout from LinkedIN</button>
+      <!-- <button class="btn btn-primary" [hidden]="!(isUserAuthenticated | async)" (click)="rawApiCall()">Get data</button>
+      <button class="btn btn-primary" [hidden]="!(isUserAuthenticated | async)" (click)="refresh()">Refresh</button>
+      <button class="btn btn-primary" (click)="getApiKeyFromSdkIN()">Get API key from SDK</button>
+      <button class="btn btn-primary" (click)="getAnonymousTokenFromSdkIN()">Get Anonymous Token from SDK</button> -->
+    </div>
+  </div>
+  
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+<!-- Routed views go here -->
+</div>
